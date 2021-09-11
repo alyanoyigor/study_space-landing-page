@@ -1,1 +1,0 @@
-# study_cosmos-landing-page
