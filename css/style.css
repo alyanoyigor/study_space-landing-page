@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-.header__content .header__text, .about__content-text, .to-book__inner, .services__inner, .contacts__inner {
+.header__text, .about__content-text, .to-book__inner, .services__inner, .contacts__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,20 +115,7 @@ button {
   max-width: 600px;
 }
 
-.header__content .header__title {
-  font-family: "Space-Age-Cyrillic";
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: 400;
-  margin-bottom: 10px;
-}
-
-.header__content .header__title span {
-  font-size: 110px;
-  line-height: inherit;
-}
-
-.header__content .header__text {
+.header__text {
   font-size: 24px;
   line-height: 29px;
   -ms-flex-wrap: wrap;
@@ -136,7 +123,7 @@ button {
   margin-bottom: 50px;
 }
 
-.header__content .header__btn {
+.header__btn {
   font-size: 24px;
   line-height: 29px;
   text-transform: uppercase;
@@ -144,6 +131,19 @@ button {
   width: 100%;
   border: 1px solid white;
   padding: 15px 10px 16px;
+}
+
+.header__title {
+  font-family: "Space-Age-Cyrillic";
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.header__title span {
+  font-size: 110px;
+  line-height: inherit;
 }
 
 .header__description {
@@ -186,6 +186,40 @@ button {
 
 .menu__link:hover {
   color: #cb0e0e;
+}
+
+.menu-btn {
+  display: none;
+  width: 40px;
+  padding: 0;
+  position: relative;
+  z-index: 10;
+  height: 30px;
+}
+
+.menu-btn span {
+  display: block;
+  height: 2px;
+  background-color: white;
+  position: relative;
+}
+
+.menu-btn span::before,
+.menu-btn span::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: white;
+  left: 0;
+}
+
+.menu-btn span::before {
+  top: -10px;
+}
+
+.menu-btn span::after {
+  top: 10px;
 }
 
 .phone {

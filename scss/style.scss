@@ -103,32 +103,32 @@ button {
 
 .header__content {
 	max-width: 600px;
+}
 
-	.header__title {
-		font-family: "Space-Age-Cyrillic";
-		@include fSizeLHeight(60px, 60px);
-		font-weight: 400;
-		margin-bottom: 10px;
+.header__text {
+	@include fSizeLHeight(24px, 29px);
+	@extend %flex-space-between;
+	flex-wrap: wrap;
+	margin-bottom: 50px;
+}
 
-		span {
-			@include fSizeLHeight(110px);
-		}
-	}
+.header__btn {
+	@include fSizeLHeight(24px, 29px);
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+	border: 1px solid white;
+	padding: 15px 10px 16px;
+}
 
-	.header__text {
-		@include fSizeLHeight(24px, 29px);
-		@extend %flex-space-between;
-		flex-wrap: wrap;
-		margin-bottom: 50px;
-	}
+.header__title {
+	font-family: "Space-Age-Cyrillic";
+	@include fSizeLHeight(60px, 60px);
+	font-weight: 400;
+	margin-bottom: 10px;
 
-	.header__btn {
-		@include fSizeLHeight(24px, 29px);
-		text-transform: uppercase;
-		text-align: center;
-		width: 100%;
-		border: 1px solid white;
-		padding: 15px 10px 16px;
+	span {
+		@include fSizeLHeight(110px);
 	}
 }
 
@@ -161,6 +161,37 @@ button {
 
 		&:hover {
 			color: #cb0e0e;
+		}
+	}
+
+	&-btn {
+		display: none;
+		width: 40px;
+		padding: 0;
+		position: relative;
+		z-index: 10;
+		height: 30px;
+
+		span {
+			display: block;
+			height: 2px;
+			background-color: white;
+			position: relative;
+		}
+		span::before,
+		span::after {
+			content: "";
+			position: absolute;
+			width: 40px;
+			height: 2px;
+			background-color: white;
+			left: 0;
+		}
+		span::before {
+			top: -10px;
+		}
+		span::after {
+			top: 10px;
 		}
 	}
 }
